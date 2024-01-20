@@ -17,11 +17,11 @@ class PrototypesController < ApplicationController
     else
       render :new, stastus: :unprocessable_entity
     end
+  end
 
-    private
+  private
 
-    def prototype_params
-      params.require(:prototype).permit(:title, :catch_copy, :concept, :image)
-    end
+  def prototype_params
+    params.require(:prototype).permit(:title, :catch_copy, :concept, :image)
   end
 end
