@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :item do
-    title { Faker::Lorem.word } 
+    title { Faker::Lorem.word }
     catch_copy { Faker::Lorem.sentence }
     concept { Faker::Lorem.paragraph }
     # association :user

@@ -14,19 +14,19 @@ RSpec.describe Item, type: :model do
       end
 
       it 'プロトタイプの名称が必須であること' do
-        @prototype.title =  ''
+        @prototype.title = ''
         @prototype.valid?
         expect(@prototype.errors[:title]).to include("can't be blank")
       end
 
       it 'キャッチコピーが必須であること' do
-        @prototype.catch_copy =  ''
+        @prototype.catch_copy = ''
         @prototype.valid?
         expect(@prototype.errors[:catch_copy]).to include("can't be blank")
       end
-      
+
       it 'コンセプトが必須であること' do
-        @prototype.concept =  ''
+        @prototype.concept = ''
         @prototype.valid?
         expect(@prototype.errors[:concept]).to include("can't be blank")
       end

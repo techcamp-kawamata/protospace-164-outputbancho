@@ -6,6 +6,6 @@ FactoryBot.define do
     password_confirmation { password }
     profile { Faker::Lorem.sentence }
     occupation { Faker::Job.title }
-    position { Faker::Job.position }    
+    position { Faker::Job.position }
   end
 end
