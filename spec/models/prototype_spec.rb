@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Item, type: :model do
+RSpec.describe Prototype, type: :model do
   before do
-    @item = FactoryBot.build(:item)
+    @prototype = FactoryBot.build(:prototype)
   end
 
   describe '投稿登録' do
