@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @prototypes = Prototype.includes(:user)
@@ -17,6 +17,10 @@ class PrototypesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @prototype = Prototype.find(params[:id])
   end
 
   private
