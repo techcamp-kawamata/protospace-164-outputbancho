@@ -28,7 +28,7 @@ class PrototypesController < ApplicationController
   def edit
     if @prototype.user_id == current_user.id 
     else
-      redirect_to root_path 
+      redirect_to root_path
     end
   end
 
