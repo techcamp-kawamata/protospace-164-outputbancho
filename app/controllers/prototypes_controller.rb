@@ -24,9 +24,9 @@ class PrototypesController < ApplicationController
     @comment = Comment.new
     @comments = @prototype.comments.includes(:user)
   end
-  
+
   def edit
-    if @prototype.user_id == current_user.id 
+    if @prototype.user_id == current_user.id
     else
       redirect_to root_path
     end
@@ -38,11 +38,11 @@ class PrototypesController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
-  end  
+  end
 
   def destroy
     if @prototype.user_id == current_user.id
-       @prototype.destroy
+      @prototype.destroy
       redirect_to root_path
     else
       redirect_to root_path
