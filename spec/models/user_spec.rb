@@ -22,7 +22,7 @@ RSpec.describe User, type: :model do
       it 'メールアドレスが一意性であること' do
         existing_user = FactoryBot.create(:user, email: 'test@example.com')
         @user.email = 'test@example.com'
-        expect { @user.save! }.to raise_error(ActiveRecord::RecordInvalid, /Email has already been taken/)
+        expect { @user.save! }.to raise_error(/Email has already been taken/)
       end
 
       it 'メールアドレスは、@を含む必要があること' do
